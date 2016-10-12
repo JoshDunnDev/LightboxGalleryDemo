@@ -14,7 +14,7 @@ $overlay.append($imageBox);
 $overlay.append($prevButton);
 $overlay.append($nextButton);
 $imageBox.append($image);
-$(".wrapper").append($overlay)
+$(".content-wrapper").append($overlay)
 
 /* ----- Capture Click of Mouse ----- */
 
@@ -68,8 +68,8 @@ $("#masonry li a").click(function(event){
 
 function hideNextPrevButtons() {
 	$lightboxImage = $('#image-box').find('img').attr('src');
-	$lastImage = $('li a').last().find("img").attr("src");
-	$firstImage = $('li a').first().find("img").attr("src");
+	$lastImage = $('.photos a').last().find("img").attr("src");
+	$firstImage = $('.photos a').first().find("img").attr("src");
     
     if ($lightboxImage === $lastImage) {
 		$("#next-arrow").hide();
